@@ -1,0 +1,52 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #a4a4a4;
+}
+main.content-container {
+  margin: 0;
+  padding: 10mm;
+  top: 30%;
+}
+
+header h1 {
+  margin: 0 8mm;
+}
+
+main.content-container button {
+  background-color: whitesmoke;
+  border: none;
+  padding: 1.5mm;
+  width: 15mm;
+  cursor: pointer;
+}
+
+main.content-container textarea,
+main.content-container textarea:focus {
+  border: 1px solid rgba(51, 59, 51, 0.61);
+  resize: none;
+}
+
+section.section-content {
+  margin: 0;
+  padding: 0;
+}
+
+section.section-content ul {
+  list-style-type: decimal;
+  -moz-column-count: 4;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 20px;
+  column-count: 4;
+  column-gap: 20px;
+  width: 100mm;
+  margin: 0 2mm;
+  list-style: none;
+}
+
+section.section-content li {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");

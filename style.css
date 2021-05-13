@@ -2,10 +2,21 @@ body {
   font-family: "Roboto", sans-serif;
   color: #a4a4a4;
 }
+
+header.content-header {
+  margin: 0;
+  padding: 5mm;
+  padding-bottom: 0;
+}
+
+header.content-header small {
+  margin: 0 8mm;
+}
+
 main.content-container {
   margin: 0;
-  padding: 10mm;
-  top: 30%;
+  padding: 12mm;
+  padding-top: 5mm;
 }
 
 header h1 {
@@ -15,15 +26,26 @@ header h1 {
 main.content-container button {
   background-color: whitesmoke;
   border: none;
-  padding: 1.5mm;
-  width: 15mm;
+  padding: 2mm;
+  width: 20mm;
   cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+main.content-container button:hover {
+  background-color: rgba(204, 204, 204, 0.658);
+  transition: 0.5s;
 }
 
 main.content-container textarea,
 main.content-container textarea:focus {
-  border: 1px solid rgba(51, 59, 51, 0.61);
   resize: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1mm;
+  padding: 5mm;
+  box-shadow: none;
 }
 
 section.section-content {
@@ -49,4 +71,22 @@ section.section-content li {
   padding: 0;
 }
 
+@media screen and (min-width: 300px) {
+  main.content-container textarea {
+    width: 80mm;
+    margin: 0 -12mm;
+  }
+  main.content-container .button-group {
+    margin: 0 0mm;
+  }
+}
+@media screen and (min-width: 357px) {
+  main.content-container textarea {
+    width: 111mm;
+    margin: 0 -12mm;
+  }
+  main.content-container .button-group {
+    margin: 0 25mm;
+  }
+}
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");

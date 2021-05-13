@@ -1,12 +1,15 @@
 body {
   font-family: "Roboto", sans-serif;
-  color: #a4a4a4;
 }
 
 header.content-header {
   margin: 0;
   padding: 5mm;
-  padding-bottom: 0;
+  text-align: center;
+}
+
+header.content-header h1 {
+  color: #c7212eb2;
 }
 
 header.content-header small {
@@ -14,20 +17,22 @@ header.content-header small {
 }
 
 main.content-container {
-  margin: 0;
+  margin: 0 210mm;
   padding: 12mm;
-  padding-top: 5mm;
+  padding-top: 20mm;
 }
 
 header h1 {
   margin: 0 8mm;
 }
 
-main.content-container button {
+main.content-container button,
+section.section-content button {
   background-color: whitesmoke;
   border: none;
-  padding: 2mm;
-  width: 20mm;
+  padding: 3.5mm;
+  margin: 2mm 20mm;
+  width: 21mm;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1);
@@ -44,13 +49,25 @@ main.content-container textarea:focus {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1mm;
-  padding: 5mm;
+  padding: 10mm;
+  padding-right: 15mm;
   box-shadow: none;
 }
 
 section.section-content {
-  margin: 0;
-  padding: 0;
+  margin: 0 200mm;
+  padding: 12mm;
+  padding-top: 5mm;
+}
+
+section.section-content button {
+  margin: 5mm 55mm;
+}
+
+section.section-content h2 {
+  text-align: center;
+  color: #c7212eb2;
+  margin-left: 20mm;
 }
 
 section.section-content ul {
@@ -64,6 +81,7 @@ section.section-content ul {
   width: 100mm;
   margin: 0 2mm;
   list-style: none;
+  text-align: center;
 }
 
 section.section-content li {
@@ -76,7 +94,8 @@ section.section-content li {
     width: 80mm;
     margin: 0 -12mm;
   }
-  main.content-container .button-group {
+  main.content-container .button-group,
+  section.section-content .button-group {
     margin: 0 0mm;
   }
 }

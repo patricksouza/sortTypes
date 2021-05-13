@@ -20,8 +20,8 @@ function sortValues(values) {
 function getValues() {
   var values = document
     .getElementById("values")
-    .value.replace(/\s/g, "")
-    .split("-");
+    .value//.replace(/\s/g, "")
+    .split(" ");
   sortValues(values);
 }
 

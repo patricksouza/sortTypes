@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SortTypes</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,7 +17,6 @@
         id="values"
         class="textAreaValues"
         rows="10"
-        cols="70"
         required
         spellcheck="true"
         placeholder="Sort this..."
@@ -30,7 +29,11 @@
       </div>
     </main>
     <section class="section-content">
+      <h2>List of sorted values</h2>
       <ul id="valuesSorted"></ul>
+      <div class="button-group">
+        <button id="copyValues" onclick="copyToClipBoard(this)" hidden>Copy</button>
+      </div>
     </section>
     <script src="app.js"></script>
   </body>

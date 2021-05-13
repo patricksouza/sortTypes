@@ -1,11 +1,10 @@
 function sortValues(values) {
   var listItem = null;
-  var sortedValues = null;
-  if (values[0] !== "") {
+  if (values !== "") {
     document.getElementById("valuesSorted").innerHTML = "";
-    sortedValues = values.reverse();
+    sortedValues = values;
     var listValues = document.getElementById("valuesSorted");
-    sortedValues
+    values
       .sort(function (fValue, lValue) {
         return lValue - fValue;
       })
@@ -14,14 +13,27 @@ function sortValues(values) {
         listItem.innerHTML = element;
         listValues.appendChild(listItem);
       });
+    document.getElementById("copyValues").hidden = false;
   }
+}
+
+function sanityValues(values) {
+  for (var propName in values) {
+    if (values[propName] === "" || values[propName] === undefined) {
+      delete values[propName];
+    }
+  }
+  return values;
 }
 
 function getValues() {
   var values = document
     .getElementById("values")
-    .value//.replace(/\s/g, "")
-    .split(" ");
+    .value // .replace(/\s/g, "")
+    .split(" ")
+    .sort();
+  values = sanityValues(values);
+  console.log(typeof values);
   sortValues(values);
 }
 
@@ -30,4 +42,15 @@ function clearValues(data) {
     document.getElementById("valuesSorted").innerHTML = "";
     //window.location.reload();
   }
+}
+
+function copyToClipBoard() {
+  var values = document.getElementById("valuesSorted").innerHTML;
+  var tempInput = document.createElement("input");
+  tempInput.value = values.replace(/(<([^>]+)>)/gi, " ");
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+  alert("Sorted values copied!");
 }
